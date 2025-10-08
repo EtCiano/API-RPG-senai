@@ -53,3 +53,8 @@ canvas {
     opacity: 0.4;
     transition: none;
 }   
+.subtexto {
+    color: gray;
+    font-size: 12px;
+    margin-top: 5px;
+}
