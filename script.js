@@ -49,7 +49,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
                 <p><strong>Propriedades:</strong> ${item.properties?.map(prop => prop.name).join(', ') || 'Nenhuma'}</p>
                 ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
-                <button onclick="loadAllEquipment()">Voltar para lista</button>
+                <button onclick="loadAllEquipment()">Go back to the list</button>
             </div>
         `;
         }
@@ -67,7 +67,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
                 <p><strong>Propriedades:</strong> ${item.properties?.map(prop => prop.name).join(', ') || 'Nenhuma'}</p>
                 ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
-                <button onclick="loadAllEquipment()">Voltar para lista</button>
+                <button onclick="loadAllEquipment()">Go back to the list</button>
             </div>
         `;
         }
@@ -80,7 +80,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Custo:</strong> ${item.cost?.quantity || 0} ${item.cost?.unit || ''}</p>
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
                 ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
-                <button onclick="loadAllEquipment()">Voltar para lista</button>
+                <button onclick="loadAllEquipment()">Go back to the list</button>
             </div>
         `;}
         else {
@@ -91,7 +91,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Custo:</strong> ${item.cost?.quantity || 0} ${item.cost?.unit || ''}</p>
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
                 ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
-                <button onclick="loadAllEquipment()">Voltar para lista</button>
+                <button onclick="loadAllEquipment()">Go back to the list</button>
             </div>
         `;}
     } catch (error) {
