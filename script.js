@@ -48,7 +48,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Custo:</strong> ${item.cost?.quantity || 0} ${item.cost?.unit || ''}</p>
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
                 <p><strong>Propriedades:</strong> ${item.properties?.map(prop => prop.name).join(', ') || 'Nenhuma'}</p>
-                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : ''}
+                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
                 <button onclick="loadAllEquipment()">Voltar para lista</button>
             </div>
         `;
@@ -66,7 +66,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Custo:</strong> ${item.cost?.quantity || 0} ${item.cost?.unit || ''}</p>
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
                 <p><strong>Propriedades:</strong> ${item.properties?.map(prop => prop.name).join(', ') || 'Nenhuma'}</p>
-                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : ''}
+                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
                 <button onclick="loadAllEquipment()">Voltar para lista</button>
             </div>
         `;
@@ -79,7 +79,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Velocidade:</strong> ${item.speed.quantity || 0} ${item.speed.unit || ''}</p>
                 <p><strong>Custo:</strong> ${item.cost?.quantity || 0} ${item.cost?.unit || ''}</p>
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
-                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : ''}
+                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
                 <button onclick="loadAllEquipment()">Voltar para lista</button>
             </div>
         `;}
@@ -90,7 +90,7 @@ async function getItemDetails(itemIndex) {
                 <p><strong>Categoria:</strong> ${item.equipment_category?.name || 'N/A'}</p>
                 <p><strong>Custo:</strong> ${item.cost?.quantity || 0} ${item.cost?.unit || ''}</p>
                 <p><strong>Peso:</strong> ${item.weight || 0} lbs</p>
-                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : ''}
+                ${item.desc ? `<p><strong>Descrição:</strong> ${item.desc.join(' ')}</p>` : 'nenhuma'}
                 <button onclick="loadAllEquipment()">Voltar para lista</button>
             </div>
         `;}
