@@ -5,34 +5,34 @@ let allEquipment = [];
 
 async function loadAllEquipment() {
     try {
-        resultsDiv.innerHTML = '<div class="loading">Carregando equipamentos...</div>';
+        resultsDiv.innerHTML = '<div class="loading">Loading equipaments...</div>';
         const response = await fetch('https://www.dnd5eapi.co/api/equipment');
         const data = await response.json();
         allEquipment = data.results;
         displayResults(allEquipment);
     } catch (error) {
-        resultsDiv.innerHTML = '<div>Erro ao carregar equipamentos</div>';
+        resultsDiv.innerHTML = '<div>Error</div>';
         console.error('Erro:', error);
     }
 }
 
 function displayResults(equipment) {
     if (equipment.length === 0) {
-        resultsDiv.innerHTML = '<div>Nenhum equipamento encontrado</div>';
+        resultsDiv.innerHTML = '<div>No results found</div>';
         return;
     }
 
     resultsDiv.innerHTML = equipment.map(item => `
         <div class="item">
             <h3>${item.name}</h3>
-            <button onclick="getItemDetails('${item.index}')">Ver Detalhes</button>
+            <button onclick="getItemDetails('${item.index}')">See details</button>
         </div>
     `).join('');
 }
 
 async function getItemDetails(itemIndex) {
     try {
-        resultsDiv.innerHTML = '<div class="loading">Carregando detalhes...</div>';
+        resultsDiv.innerHTML = '<div class="loading">Loading details...</div>';
         const response = await fetch(`https://www.dnd5eapi.co/api/equipment/${itemIndex}`);
         const item = await response.json();
         
@@ -95,7 +95,7 @@ async function getItemDetails(itemIndex) {
             </div>
         `;}
     } catch (error) {
-        resultsDiv.innerHTML = '<div>Erro ao carregar detalhes do item</div>';
+        resultsDiv.innerHTML = '<div>Error</div>';
         console.error('Erro:', error);
     }
 }
